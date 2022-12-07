@@ -18,6 +18,7 @@ jobs:
       - run:
           name: Swap node versions
           command: |
+            cd ..
             set +e
             wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
             export NVM_DIR="$HOME/.nvm"
