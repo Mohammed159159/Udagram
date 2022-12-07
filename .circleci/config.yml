@@ -12,9 +12,11 @@ jobs:
       - image: "cimg/node:14.15"
     steps:
       # install node and checkout code
+      - node/install
           # node-version: '14.15'         
+      - checkout
       - run:
-          name: Install Node
+          name: Swap node versions
           command: |
             cd ..
             set +e
@@ -27,7 +29,6 @@ jobs:
 
             echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
             echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
-      - checkout
       # Use root level package.json to install dependencies in the frontend app
       - run:
           name: Install Front-End Dependencies
