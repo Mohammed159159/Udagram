@@ -38,7 +38,7 @@ jobs:
       - run:
           name: Front-End Lint
           command: |
-            npm run forntend:lint
+            npm run frontend:lint
   build:
     docker:
       # the base image can run most needed actions with orbs
