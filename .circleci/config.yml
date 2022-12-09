@@ -57,7 +57,7 @@ jobs:
       - run:
           name: Set Environment Variables
           command: |
-            npm run set_env
+            npm run set_env_vars
       - run:
           name: Deploy Frontend
           # TODO: Install, build, deploy in both apps
