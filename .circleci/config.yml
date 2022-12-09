@@ -15,7 +15,7 @@ jobs:
       - node/install:
           node-version: '14.15.1'
       - browser-tools/install-browser-tools:
-          chrome-version: 100.0.4896.20        
+          chrome-version: 100.0.4896.60        
       - checkout
       # Use root level package.json to install dependencies in the frontend app
       - run:
