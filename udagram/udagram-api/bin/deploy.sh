@@ -1,4 +1,6 @@
-# DO NOT STORE YOUR CREDENTIALS INTO GIT
+# initializing eb environment and using it to deploy backend
+eb init udagram-api --region us-east-1 --platform node.js && eb list && eb use udagram-api-dev && eb deploy
+# setting eb env vars
 eb setenv POSTGRES_USERNAME=$POSTGRES_USERNAME
 eb setenv POSTGRES_PASSWORD=$POSTGRES_PASSWORD
 eb setenv POSTGRES_HOST=$POSTGRES_HOST

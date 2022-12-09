@@ -55,10 +55,6 @@ jobs:
       - aws-cli/setup
       - checkout
       - run:
-          name: Set Environment Variables
-          command: |
-            npm run set_env_vars
-      - run:
           name: Deploy Frontend
           # TODO: Install, build, deploy in both apps
           command: |
@@ -67,7 +63,6 @@ jobs:
           name: Deploy Backend
           # TODO: Install, build, deploy in both apps
           command: |
-            cd ./eb init udagram-api --region us-east-1 --platform node.js
             npm run api:deploy
             
 workflows:
