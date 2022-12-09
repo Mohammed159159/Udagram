@@ -28,14 +28,15 @@ jobs:
           name: Install API Dependencies
           command: |
            npm run api:install
+      - persist_to_workspace:
+        root: .
   lint:
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/node:14.15.1"
     steps:
-      - node/install:
-          node-version: '14.15' 
-      - checkout
+      - attach_workspace:
+        at: ./
       - run:
           name: Front-End Lint
           command: |
