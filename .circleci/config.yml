@@ -14,6 +14,8 @@ jobs:
       - node/install:
           node-version: '14.15.1'         
       - checkout
+      - persist_to_workspace:
+          root: ./
       # Use root level package.json to install dependencies in the frontend app
       - run:
           name: Install Front-End Dependencies
@@ -29,12 +31,12 @@ jobs:
           command: |
            npm run api:install
   lint:
-      - node/install:
-          node-version: '14.15' 
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/node:14.15.1"
     steps:
+      - node/install:
+          node-version: '14.15' 
       - attach_workspace:
           at: ./
       - run:
