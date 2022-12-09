@@ -11,6 +11,8 @@ jobs:
       - image: "cimg/node:14.15.1"
     steps:
       # install node and checkout code
+      - persist_to_workspace:
+        root: ./
       - node/install:
           node-version: '14.15.1'         
       - checkout
@@ -28,19 +30,19 @@ jobs:
           name: Install API Dependencies
           command: |
            npm run api:install
-      - persist_to_workspace:
-        root: .
   lint:
+      - node/install:
+          node-version: '14.15' 
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/node:14.15.1"
     steps:
       - attach_workspace:
-        at: ./
+          at: ./
       - run:
           name: Front-End Lint
           command: |
-            npm run frontend:lint
+            npm run forntend:lint
   build:
     docker:
       # the base image can run most needed actions with orbs
@@ -48,7 +50,6 @@ jobs:
     steps:
       - node/install:
           node-version: '14.15' 
-      - checkout
       # Build the frontend app
       - run:
           name: Front-End Build
