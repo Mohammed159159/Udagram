@@ -29,25 +29,23 @@ jobs:
           command: |
            npm run api:install
   lint:
-      - node/install:
-          node-version: '14.15.1'         
-      - checkout
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/node:14.15.1"
     steps:
+      - node/install:
+          node-version: '14.15' 
       - run:
           name: Front-End Lint
           command: |
             npm run forntend:lint
   build:
-      - node/install:
-          node-version: '14.15.1'         
-      - checkout
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/node:14.15.1"
     steps:
+      - node/install:
+          node-version: '14.15' 
       # Build the frontend app
       - run:
           name: Front-End Build
@@ -70,10 +68,12 @@ jobs:
       - checkout
       - run:
           name: Deploy Frontend
+          # TODO: Install, build, deploy in both apps
           command: |
             npm run frontend:deploy
       - run:
           name: Deploy Backend
+          # TODO: Install, build, deploy in both apps
           command: |
             npm run api:deploy
 
