@@ -67,6 +67,7 @@ jobs:
           name: Deploy Backend
           # TODO: Install, build, deploy in both apps
           command: |
+            eb init udagram-api --region us-east-1 --platform node.js
             npm run api:deploy
             
 workflows:
