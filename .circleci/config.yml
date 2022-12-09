@@ -12,7 +12,7 @@ jobs:
     steps:
       # install node and checkout code
       - persist_to_workspace:
-        root: ./
+          root: ./
       - node/install:
           node-version: '14.15.1'         
       - checkout
