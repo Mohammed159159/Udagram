@@ -54,10 +54,10 @@ jobs:
       - eb/setup
       - aws-cli/setup
       - checkout
-      - run:
-          name: Set Environment Variables
-          command: |
-            npm run set_env_vars
+      # - run:
+      #     name: Set Environment Variables
+      #     command: |
+      #       npm run set_env_vars
       - run:
           name: Deploy Frontend
           # TODO: Install, build, deploy in both apps
