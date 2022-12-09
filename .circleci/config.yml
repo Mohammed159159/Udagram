@@ -55,10 +55,19 @@ jobs:
       - aws-cli/setup
       - checkout
       - run:
+          name: Set Environment Variables
+          command: |
+            npm run set_env
+      - run:
           name: Deploy Frontend
           # TODO: Install, build, deploy in both apps
           command: |
             npm run frontend:deploy
+      - run:
+          name: Deploy Backend
+          # TODO: Install, build, deploy in both apps
+          command: |
+            npm run api:deploy
             
 workflows:
   udagram:
