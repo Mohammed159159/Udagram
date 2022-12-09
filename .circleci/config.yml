@@ -1,4 +1,5 @@
 version: 2.1
+working_directory: ./
 orbs:
   # orgs contain basc recipes and reproducible actions (install node, aws, etc.)
   node: circleci/node@5.0.2
@@ -6,7 +7,7 @@ orbs:
   aws-cli: circleci/aws-cli@3.1.1
   # different jobs are calles later in the workflows sections
 jobs:
-  install:
+  build:
     docker:
       - image: "cimg/node:14.15.1"
     steps:
@@ -22,32 +23,18 @@ jobs:
             echo $(node --version)
             echo "NPM --version" 
             echo $(npm --version)
-            npm run frontend:install 
+            npm run frontend:install
       # Install dependencies in the the backend API           
       - run:
           name: Install API Dependencies
           command: |
            npm run api:install
-  lint:
-    docker:
-      # the base image can run most needed actions with orbs
-      - image: "cimg/node:14.15.1"
-    steps:
-      - node/install:
-          node-version: '14.15'
-      - checkout
-      - attach_workspace:
-          at: ./
+      # Lint the frontend
       - run:
           name: Front-End Lint
           command: |
             npm run frontend:lint
-  build:
-    docker:
-      # the base image can run most needed actions with orbs
-      - image: "cimg/node:14.15.1"
-    steps:
-      - node/install:
+            - node/install:
           node-version: '14.15' 
       - checkout
       # Build the frontend app
@@ -84,31 +71,15 @@ jobs:
 workflows:
   udagram:
     jobs:
-      - install
-      - lint:
-          requires:
-            - install
-      - build:
-          requires:
-            - lint
-      - deploy:
+      - build
+      - hold:
+          filters:
+            branches:
+              only:
+                - master
+          type: approval
           requires:
             - build
-
-# workflows:
-#   udagram:
-#     jobs:
-#       - install
-#       - lint
-#       - build
-#       - hold:
-#           filters:
-#             branches:
-#               only:
-#                 - master
-#           type: approval
-#           requires:
-#             - build
-#       - deploy:
-#           requires:
-#             - hold
+      - deploy:
+          requires:
+            - hold
