@@ -1,5 +1,4 @@
 version: 2.1
-working_directory: ./
 orbs:
   # orgs contain basc recipes and reproducible actions (install node, aws, etc.)
   node: circleci/node@5.0.2
@@ -34,9 +33,6 @@ jobs:
           name: Front-End Lint
           command: |
             npm run frontend:lint
-            - node/install:
-          node-version: '14.15' 
-      - checkout
       # Build the frontend app
       - run:
           name: Front-End Build
