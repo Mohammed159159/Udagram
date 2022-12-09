@@ -14,8 +14,6 @@ jobs:
       - node/install:
           node-version: '14.15.1'         
       - checkout
-      - persist_to_workspace:
-          root: ./
       # Use root level package.json to install dependencies in the frontend app
       - run:
           name: Install Front-End Dependencies
@@ -36,7 +34,8 @@ jobs:
       - image: "cimg/node:14.15.1"
     steps:
       - node/install:
-          node-version: '14.15' 
+          node-version: '14.15'
+      - checkout
       - attach_workspace:
           at: ./
       - run:
@@ -50,6 +49,7 @@ jobs:
     steps:
       - node/install:
           node-version: '14.15' 
+      - checkout
       # Build the frontend app
       - run:
           name: Front-End Build
