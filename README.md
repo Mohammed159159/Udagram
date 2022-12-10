@@ -3,7 +3,7 @@
 [![Mohammed159159](https://circleci.com/gh/Mohammed159159/Udagram.svg?style=svg)](https://app.circleci.com/pipelines/github/Mohammed159159?status=none&status=success)
 
 
-[![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)](http://randomstring20123412efsd.s3-website-us-east-1.amazonaws.com/home)
+[![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)](http://randomstring20123412efsd.s3-website-us-east-1.amazonaws.com/)
 ## Overview
 📷 Udagram is an web app for sharing posts, photos and comments! This is a full-stack Node application written in TypeScript, built in JavaScript, and deployed using Amazon Web Services (AWS).
 
