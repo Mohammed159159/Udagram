@@ -11,7 +11,6 @@ describe('new App', () => {
       page.navigateTo('/home');
     });
     it('should have a title saying Home', () => {
-      
       page.getPageOneTitleText().then(title => {
         console.log(`TITLE----------------------------------------------------------${title}`);
         expect(title).toEqual('Home');
