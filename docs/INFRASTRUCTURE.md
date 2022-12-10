@@ -3,10 +3,18 @@ The project uses a pipeline that applies CI/CD on AWS. This is a full-stack appl
 
 ## 1. Database
 For the database, the project uses AWS Relational Database Service (RDS). It uses the free tier, with trafic being set to all traffic, and has public access enabled. Although this is not the best practice, it is enough for the sake of this project. The database stores the data for the users and media of Udagram
-![Database Configuration Image]([udagram\udagram-api\mock\xander0.jpg](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/rds.png))
+![Database Configuration Image](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/rds.png)
 
 ## 2. API
-For the API, the project uses Elastic Beanstalk (EB) as a means for hosting the server. EB uses Simple Storage Service (S3) to store the files of the API in addition to a multitude of other services such as Elastic Compute Cloud. The API communicates with the database and the frontend to process requests and send responces. The environmental variables were set by the virtual machine of CircleCI as shown ![Env Vars](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/EB_Env.png). The current health state is OK as shown.
+For the API, the project uses Elastic Beanstalk (EB) as a means for hosting the server. EB uses Simple Storage Service (S3) to store the files of the API in addition to a multitude of other services such as Elastic Compute Cloud. The API communicates with the database and the frontend to process requests and send responces. The environmental variables were set by the virtual machine of CircleCI as shown: 
+
+
+![Env Vars](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/EB_Env.png)
+
+
+The current health state is OK as shown:
+
+
 ![EB Health](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/eb.png)
 
 ## 3. Frontend
