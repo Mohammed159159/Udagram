@@ -24,14 +24,14 @@ The following are the jobs and steps included in the pipeline.
 ## CircleCI
 Below are screenshots that shows the workflow of the jobs and the steps for each job
 
-[![General Diagram](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_General.png)]
+![General Diagram](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_General.png)
 
-[![Build](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_Build.png)]
+![Build](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_Build.png)
 
-[![Deploy](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_deploy.png)]
+![Deploy](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_deploy.png)
 
 ## Environmental Variables
 The environment variables of the project are set using CircleCI's project settings. These are the variables that the deploy. Below is a demonstration screenshot.
 
-[![Env Vars](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_Env.png)]
+![Env Vars](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_Env.png)
 
