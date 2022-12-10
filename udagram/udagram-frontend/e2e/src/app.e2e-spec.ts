@@ -13,7 +13,7 @@ describe('new App', () => {
     it('should have a title saying Home', () => {
       page.getPageOneTitleText().then(title => {
         expect(title).toEqual('Home');
-        console.log(title)
+        console.log(title);
       });
     });
   });
