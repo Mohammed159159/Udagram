@@ -26,7 +26,7 @@ Below are screenshots that shows the workflow of the jobs and the steps for each
 
 [![General Diagram](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_General.png)](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_General.png)
 
-[Build](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_Build.png)
+[![Build](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_Build.png)]
 
 [Deploy](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_deploy.png)
 
