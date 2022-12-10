@@ -26,4 +26,4 @@ For the forntend, the project uses Simple Storage Service for hosting the files.
 For CI/CD, the project uses CircleCI and GitHub. Once new code is pushed, CircleCI is triggered and initiates pipiline to update deployed code on EB and S3.
 
 ## The following diagram demonstrates how these elements communicate together
-![Diagram](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/Infrastructure.png)
+![Diagram](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/Infastructure.png)
