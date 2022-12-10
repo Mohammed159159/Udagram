@@ -24,7 +24,7 @@ The following are the jobs and steps included in the pipeline.
 ## CircleCI
 Below are screenshots that shows the workflow of the jobs and the steps for each job
 
-[General Diagram](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_General.png)
+[[General Diagram](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_General.png)](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_General.png)
 
 [Build](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_Build.png)
 
