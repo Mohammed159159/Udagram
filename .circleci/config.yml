@@ -11,7 +11,7 @@ jobs:
   build:
     # Choosing appropriate container
     docker:
-      - image: "cimg/node:14.15.1"
+      - image: "cimg/node:14.15.1" 
     steps:
       # Installing node and browser tools then checkout
       - node/install:
