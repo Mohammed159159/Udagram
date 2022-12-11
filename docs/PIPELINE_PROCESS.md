@@ -35,3 +35,7 @@ The environment variables of the project are set using CircleCI's project settin
 
 ![Env Vars](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/C_Env.png)
 
+## Pipeline Process and AWS
+This diagram shows how the pipeline process goes from development (backend and frontend) to GitHub to CircleCI to AWS
+![Diagram](https://github.com/Mohammed159159/Udagram/blob/master/docs/media/Infastructure.png)
+
